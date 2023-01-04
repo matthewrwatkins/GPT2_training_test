@@ -209,7 +209,7 @@ for i in range(len(test_set)):
   final.append(test_set['Generated_lyrics'][i].replace(to_remove,''))
 
 test_set['Generated_lyrics'] = final
-view raw
+
 #Using BLEU score to compare the real sentences with the generated ones
 import statistics
 from nltk.translate.bleu_score import sentence_bleu
