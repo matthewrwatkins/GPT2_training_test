@@ -33,7 +33,7 @@ df = df.reset_index()
 #For the test set only, keep last 20 words in a new column, then remove them from original column
 test_set['True_end_lyrics'] = test_set['Lyric'].str.split().str[-20:].apply(' '.join)
 test_set['Lyric'] = test_set['Lyric'].str.split().str[:-20].apply(' '.join)
-lass SongLyrics(Dataset):  
+class SongLyrics(Dataset):  
     def __init__(self, control_code, truncate=False, gpt2_type="gpt2", max_length=1024):
 
         self.tokenizer = GPT2Tokenizer.from_pretrained(gpt2_type)
