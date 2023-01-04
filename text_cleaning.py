@@ -18,4 +18,3 @@ for i in range(len(test_set)):
   final.append(test_set['Generated_lyrics'][i].replace(to_remove,''))
 
 test_set['Generated_lyrics'] = final
-view raw
